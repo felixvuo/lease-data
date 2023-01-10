@@ -7,10 +7,10 @@ Constraints" by Felix Ulrich-Oltean, Peter Nightingale and James Walker
 ## Contents
 - `constraint-models.tgz`: the constraint problems modelled in Essence Prime
 - `savilerow-1.9.1-extract-features-XXX.tgz`: a modified version of the [Savile
-  Row]() constraint modelling tool, based on realease 1.9.1 but including
-  feature extraction and the full set of 9 pb/li sat encodings.  We used Savile
-  Row to solve all the problems in our corpus using the different encodings, as
-  well as to help us extract features.
+  Row](https://savilerow.cs.st-andrews.ac.uk/) constraint modelling tool, based
+  on realease 1.9.1 but including feature extraction and the full set of 9
+  pb/li sat encodings.  We used Savile Row to solve all the problems in our
+  corpus using the different encodings, as well as to help us extract features.
 - `scripts/`: the code for the machine learning task.  The main work is done in
   `fullcycle.py`.
 - `setups-and-results/`: the configuration details for the various ML setups we
