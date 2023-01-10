@@ -1,0 +1,74 @@
+###############################################################################
+### Have you really tweaked the config?
+READY : true
+
+###############################################################################
+### Data Sources and File Names
+
+# the results of running all configs (from the SR .info files)
+algo_runs_path : "../solving-and-features/xtra-infos.csv.gz"
+
+# the penalised runtimes directory
+timings_dir_path : "."
+
+# featureset short names - will be used in filenames and plots etc
+featuresets :
+  - f2f
+  - f2fsr
+  - sumpb
+  - combi
+
+# expecting `features-{featureset}.csv.gz
+feature_dir_path : "../solving-and-features"
+
+# feature extraction costs [model,param,featureset,time]
+feature_costs_path : "../solving-and-features/extraction-times.csv.gz"
+
+# where are the predictions to be saved or loaded from?
+predictions_path : "predictions.csv.gz"
+
+# evaluation output
+eval_output_dir : "."
+eval_prefix : "eval"
+
+###############################################################################
+### Experimental Results
+
+# what PAR measure are we using?
+penalty : 10
+
+# what are the timeouts in seconds?
+sr_timeout     : 3600
+solver_timeout : 3600
+total_timeout  : 3600
+
+
+###############################################################################
+### Machine-Learning
+
+# overall starting seed for test/train splits, hyperparam tuning, and training
+seed : 1
+
+# proportion of data for testing
+test_set_proportion : 0.2
+
+# portfolio size
+portfolio_size : 6
+
+# how many times shall we run the train/test cycle?
+ml_iterations : 50
+
+# how many iterations of hyperparameter tuning?
+hp_tune_iterations : 50
+
+# parallel cpus? -1 means "use them all"
+cpus : -1
+
+# hyperparameter tuning info and feature importance info, empty string "" to skip
+ml_diagnostics_dir : "."
+
+# shall we use a custom scorer during HP search and feature importance?
+use_custom_scorer : true
+
+# shall we weight the samples when fitting according to vb time
+use_sample_weight : true
