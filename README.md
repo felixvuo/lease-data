@@ -16,6 +16,8 @@ Constraints" by Felix Ulrich-Oltean, Peter Nightingale and James Walker
 - `setups-and-results/`: the configuration details for the various ML setups we
   tried and the accompanying results
 - `analysis/`: code for summarising and plotting
+- `appendix-picat-trial`: models and instances for the mini experiment comparing
+  picat's log encoding with Savile Row's
 
 ## Software Requirements
 - a Java runtime environment (we used version 13)

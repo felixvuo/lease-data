@@ -1,0 +1,29 @@
+import sat.
+import util.
+
+main(Args) =>
+    solve_knap(Args).
+
+solve_knap(Args) =>
+    nolog,
+    Params = open(Args[1]),
+    MaxWeight = to_int(read_line(Params)),
+    ValsStr = split(read_line(Params),","),
+    N = len(ValsStr),
+    Vals = [to_int(X) : X in ValsStr],
+    WeightsStr = split(read_line(Params),","),
+    Weights = [to_int(X) : X in WeightsStr],
+
+    Take = new_list(N),
+    Take :: 0..1 ,
+    TotalWeight #= sum([ W * T : {W,T} in zip(Weights,Take)]),
+    TotalWeight #<= MaxWeight , 
+
+    TotalVal #= sum([ V * T : {V,T} in zip(Vals,Take)]),    
+
+    solve($[ff,updown,max(TotalVal),report(printf("Found %d\n",TotalVal))],Take ++ [TotalWeight]),
+
+    println(totalWeight=TotalWeight),
+    println(maxWeight=MaxWeight),
+    println(totalVal=TotalVal),
+    println(take=Take).

@@ -1,0 +1,16 @@
+language ESSENCE' 1.0
+given target : int
+letting RANGE be domain int(0..target)
+find item1 : RANGE
+find item2 : RANGE
+find item3 : RANGE
+find item4 : RANGE
+such that 
+     (item1 + item2 + item3 + item4 = target),
+     (item1 * item2 * item3 * item4 = target*100*100*100),
+
+      $ symmetry breaking
+     (item1 > item2),
+     (item2 > item3),
+     (item3 > item4)
+     

@@ -1,0 +1,19 @@
+import sat.
+
+main(Args) =>
+    solve_grocery(Args).
+
+solve_grocery(Args) =>
+    println(Args[1]),
+    Target := to_int(Args[1]),
+    Prices = [A,B,C,D],
+    Prices :: 0..Target,
+    A + B + C + D #= Target,
+    A * B * C * D #= Target*100*100*100,
+    A #> B,
+    B #> C,
+    C #> D,
+    solve(Prices),
+    println(Prices).
+
+

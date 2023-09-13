@@ -1,0 +1,16 @@
+var 223..353: item1:: output_var ;
+var 144..251: item2:: output_var ;
+var 112..166: item3:: output_var ;
+var 92..115: item4:: output_var ;
+var 44549..63566: aux0:: var_is_introduced ;
+var 4989488..10551956: aux1:: var_is_introduced ;
+constraint int_times(item1, item2, aux0);
+constraint int_times(aux0, item3, aux1);
+constraint int_lin_eq([1,1,1,1],[item1,item2,item3,item4],713);
+constraint int_times(aux1, item4, 713000000);
+constraint int_lt(item2,item1);
+constraint int_lt(item3,item2);
+constraint int_lt(item4,item3);
+
+solve :: int_search([item1, item2, item3, item4], input_order, indomain_min, complete)
+ satisfy;
